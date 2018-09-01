@@ -1,0 +1,25 @@
+allprojects {   
+	apply plugin: 'java'
+    apply plugin: 'maven'
+    
+  
+    ext {
+        javaVersion = 1.8
+        groupValue = 'com.kren'
+        versionValue = '1.0-SNAPSHOT'
+    }
+ 
+    repositories { 
+        mavenCentral()
+    }   
+
+    
+     
+}
+
+subprojects {    
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+    group = groupValue
+    version = versionValue    
+}
